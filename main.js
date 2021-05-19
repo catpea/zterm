@@ -19,7 +19,6 @@ function createWindow () {
   mainWindow.setMenuBarVisibility(false);
 
   ipcMain.on('openDevTools', (event, arg) => {
-    console.log('Heard openDevTools');
     mainWindow.webContents.openDevTools()
   })
 
