@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>zterm</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link type="text/css" rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+    <style>
+
+      body {
+        background: black;
+      }
+
+      #xterm-container {
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      ::-webkit-scrollbar {
+          background-color: black;
+      }
+
+      ::-webkit-scrollbar-track {
+          background-color: rgb(0,0,0);
+      }
+
+      ::-webkit-scrollbar-thumb {
+          background: rgb(30,30,30);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="xterm-container"></div>
+    <script src="./renderer.js"></script>
+  </body>
+</html>

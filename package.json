@@ -1,0 +1,66 @@
+{
+  "name": "zterm",
+  "productName": "zterm",
+  "version": "1.0.0",
+  "description": "Electron Based Terminal",
+  "keywords": [],
+  "main": "./main.js",
+  "author": "",
+  "scripts": {
+    "icon" : "erb-generate --input icon.png --output resources/",
+    "save": "git add .; git commit -m 'New Release'; git push; npm version patch; npm publish; git push;",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "x-publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "6.0.0-beta.52",
+    "@electron-forge/maker-deb": "6.0.0-beta.52",
+    "@electron-forge/maker-rpm": "6.0.0-beta.52",
+    "@electron-forge/maker-squirrel": "6.0.0-beta.52",
+    "@electron-forge/maker-zip": "6.0.0-beta.52",
+    "electron": "^13.0.0-beta.8",
+    "erb-icons-gen": "^1.0.1"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel"
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catpea/zterm.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catpea/zterm/issues"
+  },
+  "dependencies": {
+    "xterm": "^4.12.0",
+    "xterm-addon-fit": "^0.5.0",
+    "xterm-addon-search": "^0.8.0",
+    "xterm-addon-web-links": "^0.4.0"
+  },
+  "homepage": "https://github.com/catpea/zterm#readme"
+}
