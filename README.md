@@ -1,7 +1,19 @@
 # zterm
 Electron Based Terminal
 
-## Instructions
+zterm is a terminal research project aimed to look into the future of terminal user interface design.
+
+## Usage
+
+```shell
+
+npm i -g epx; # install electron package execute
+epx zterm; # start zterm with epx
+
+
+```
+
+## Development
 
 Clone the repository and run ```npm run start```
 
